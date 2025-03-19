@@ -19,3 +19,5 @@ export const Items: Item [] = [
     {name: 'cinco', icon: cinco},
     {name: 'seis', icon: seis},
 ]
+
+console.log(Items[2])

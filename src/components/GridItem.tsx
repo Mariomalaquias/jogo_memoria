@@ -13,13 +13,13 @@ type Props = {
 
 export const GridItem = ({item, onClick}: Props) => {
     return (
-        <div onClick={onClick} className={clsx(' cursor-pointer transition',
+        <div onClick={onClick} className={clsx('rounded-lg cursor-pointer transition',
                 (item.permanentShown || item.shown) ? 'bg-blue-500' : 'bg-gray-200'
                 )}>
             {item.permanentShown === false && item.shown === false && <Image className="opacity-20" src={fundo} alt=""/>}
 
-            {(item.permanentShown || item.shown && item.item !== null && <Image src={
-                Items[item.item].icon} alt="" />)}
+            {(item.permanentShown || item.shown ) && item.item !== null && <Image src={
+                Items[item.item].icon} alt="" />}
         </div>
     )
 }
